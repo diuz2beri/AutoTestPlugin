@@ -40,8 +40,16 @@ class TestPluginDialog(QtGui.QDialog, FORM_CLASS):
         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
+        self.feature_count.textChanged.connect(self.text_changed)
 
     def update_layer_name(self):
         active_layer = self.iface.activeLayer()
         active_layer_name = active_layer.name()
         self.active_layer_input.setText(active_layer_name)
+        feature_count = active_layer.featureCount()
+        self.feature_count.setText(str(feature_count))
+
+    def text_changed(self, new_text):
+        print new_text
+        # self.active_layer_input.setText(new_text)
+

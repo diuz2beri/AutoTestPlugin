@@ -19,12 +19,26 @@
      <item>
       <widget class="QLabel" name="active_layer_label">
        <property name="text">
-        <string>Active Layer: </string>
+        <string>Active Layer</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLineEdit" name="active_layer_input"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Feature count</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="feature_count"/>
      </item>
     </layout>
    </item>
